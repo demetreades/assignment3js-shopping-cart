@@ -1,0 +1,20 @@
+{
+  "name": "design-patterns",
+  "version": "0.1.0",
+  "description": "Assignment3 - Strategy Pattern",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "attribute": "nodemon ./src/models/attributes/main.js",
+    "manager": "nodemon ./src/models/manager.js",
+    "strategy": "nodemon ./src/models/strategy.js",
+    "strategies": "nodemon ./src/models/strategies.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "design",
+    "patterns"
+  ],
+  "author": "quorum",
+  "license": "ISC"
+}
