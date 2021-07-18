@@ -82,9 +82,6 @@ const cart = new Cart(Stock);
 
 
 
-
-
-
 // Example 3 :: buy all available products from Stock
 // -----------------------------------------------
 // cart.buyAll(80);     // credit card       //  checks all products from Stock and checkout
@@ -118,7 +115,9 @@ const cart = new Cart(Stock);
 
 // cart.checkOut(80);            //  rate: 0.8
 
+
 // ---------
+
 
 
 
