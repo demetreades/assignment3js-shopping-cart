@@ -49,7 +49,7 @@ Uncomment code snippets right under each Example title.
 
 The `cart` object is the main object that can `add` items in your shopping cart and finally `checkout` with a given plan as a discount.
 
-To create a `cart` object you need to pass a `Stock` object or any other array of `TShirt` objects as the list of current available products.
+To create a `cart` object you need to pass a `Stock` array or any other array of `TShirt` objects as the list of current available products.
 on `checkout` creates a `new Order` object witch that takes the payment strategy we apply and the `products` base price added from the `cart`.
 
 <br>
@@ -212,7 +212,7 @@ getAttribute(colors.Red)
 
       ./src/models/order.js
 
-`Cart` produces the `cart` object that takes a `Stock` object and adds items into products array and `checkout` by creating a  `new Order`.
+`Cart` produces the `cart` object that takes a `Stock` array and adds items into products array and `checkout` by creating a  `new Order`.
 
 `Order` calculates total attribute cost per item with labor and the given discount on checkout.
 
