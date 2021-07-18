@@ -66,16 +66,16 @@ const cart = new Cart(Stock);
 // Example 2 :: buy one or multiply products from Stock
 // ----------------------------------------------------
 
-cart.check(66);               //  takes Stock and adds a product by id to products from Stock list 
+// cart.check(66);               //  takes Stock and adds a product by id to products from Stock list 
 
-cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
-cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
-cart.check(229);              //  takes Stock and adds a product by id to products from Stock list 
+// cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
+// cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
+// cart.check(229);              //  takes Stock and adds a product by id to products from Stock list 
 
 // cart.itemsChecked();          //  list of available items in products array
 
 // cart.checkOut(80);            //  CHECKOUT pass the discount rate from 0 to 100
-cart.checkOut(90);            //  CHECKOUT pass the discount rate from 0 to 100
+// cart.checkOut(90);            //  CHECKOUT pass the discount rate from 0 to 100
 // cart.checkOut(100);           //  CHECKOUT pass the discount rate from 0 to 100
 
 // ---------
