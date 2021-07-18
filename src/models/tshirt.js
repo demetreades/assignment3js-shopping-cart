@@ -21,21 +21,18 @@ class TShirt {
 
 };
 
+
 function TShirtGenerator(colors, sizes, fabrics, array = []) {
-let count = 0;
   Object.values(colors).forEach(color => {
-    console.log(color);
     Object.values(sizes).forEach(size => {
-      console.log(size);
       Object.values(fabrics).forEach(fabric => {
-        count++
-        console.log(fabric);
-        array.push(new TShirt(count, color, size, fabric))
+        array.push(new TShirt(array.length, color, size, fabric));
       });
     });
   });
   return array;
 };
+
 
 
 
