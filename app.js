@@ -84,6 +84,7 @@ const cart = new Cart(Stock);
 
 // Example 3 :: buy all available products from Stock
 // -----------------------------------------------
+
 // cart.buyAll(80);     // credit card       //  checks all products from Stock and checkout
 // cart.buyAll(90);     // money bank        //  checks all products from Stock and checkout
 // cart.buyAll(100);    // cash  flat rate   //  checks all products from Stock and checkout
