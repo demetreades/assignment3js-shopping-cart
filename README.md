@@ -1,6 +1,6 @@
 # DESIGN PATTERNS
 
-![app](./assets/img/app.png)
+![app](./assets/img/app2.png)
 
  Jump to [Index](#index) ,
 class repo: [Assignment3JS](https://github.com/davidoster/Assignment3JS)
@@ -54,7 +54,7 @@ on `checkout` creates a `new Order` object with that takes the payment strategy 
 
 <br>
 
- ![buyall](./assets/img/buyall.png)
+ ![buyall](./assets/img/buyall2.png)
 
 
 <br>
@@ -197,7 +197,7 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 <br>
 
-![get](./assets/img/get.png)
+![get](./assets/img/get2.png)
 
 getAttribute(fabrics.Silk)
 
@@ -249,13 +249,13 @@ getAttribute(colors.Red)
 
 <br>
 
-![checkout](./assets/img/strategy2.png)
+![checkout](./assets/img/strategy3.png)
 
 `checkOut(90)`
 
 <br>
 
-![cart](./assets/img/cart.png)
+![cart](./assets/img/cart2.png)
 
 `itemsChecked()`
 
