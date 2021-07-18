@@ -251,7 +251,7 @@ getAttribute(colors.Red)
 
 ![checkout](./assets/img/strategy2.png)
 
-`checkOut(80)`
+`checkOut(90)`
 
 <br>
 
