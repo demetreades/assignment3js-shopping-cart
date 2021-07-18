@@ -214,6 +214,8 @@ getAttribute(colors.Red)
 
 `Cart` produces the `cart` object that takes a `Stock` object and adds items into products array and `checkout` by creating a  `new Order`.
 
+`Order` calculates total attribute cost per item with labor and the given discount on checkout.
+
 
 
 

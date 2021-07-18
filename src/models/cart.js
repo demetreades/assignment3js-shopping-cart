@@ -10,6 +10,7 @@ class Cart {
 
   calc() {
     this.total = 0;
+    console.log('\ncalc() -----------\n');
     this.products.forEach((tshirt, index) => {
       console.log(`${index+1}.    PRODUCT #${tshirt.id}: \t| price: ${tshirt.price}$ \t| size: ${tshirt.size} \t| color: ${tshirt.color} \t| fabric: ${tshirt.fabric}\t\t::: ADDED TO YOUR CART`);
       this.total = this.total + tshirt.price
@@ -23,7 +24,7 @@ class Cart {
 
   check(index) {
     this.products.push(this.stock.find(tshirt => tshirt.id === index))
-    console.log(`PRODUCT: ${index}# \tcheckedn`);
+    console.log(`PRODUCT: ${index}# \tchecked`);
     return this; 
   }
 
@@ -37,9 +38,9 @@ class Cart {
   checkOut = (rate) => {
     this.calc();
     console.log('\n------------------');
-    console.log(`\nCHECK OUT!! with base total price: ${this.total.toFixed(2)}$ , Quantity: ${this.products.length}`);
+    console.log(`\nCHECK OUT \t with base total price: ${this.total.toFixed(2)}$ , Quantity: ${this.products.length}#`);
     this.products = [];
-    console.log('------------------');
+    console.log('\n--------- checkout\n');
     return new Order(this.total, rate)
   }
 

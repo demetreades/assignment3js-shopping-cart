@@ -13,7 +13,7 @@ const { TShirt, TShirtGenerator } = require('./src/models/tshirt');
 // ////////////////////////////////////////////////////////////////////// //
 
 console.log('\n\t                                   app.js');
-console.log('\tSTART ===================================\n');
+console.log('\tSTART ===================================\n\n');
 
 
 
@@ -23,7 +23,9 @@ console.log('\tSTART ===================================\n');
 const myTSHIRT1 = new TShirt(456, sizes.S, colors.Yellow, fabrics.Wool);
 const myTSHIRT2 = new TShirt(552, sizes.XL, colors.Red, fabrics.Silk);
 const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
-// console.log(myTSHIRT);
+// console.log(myTSHIRT1);
+// console.log(myTSHIRT2);
+// console.log(myTSHIRT3);
 // --------------------------------------------------------------------
 
 
@@ -52,7 +54,9 @@ const cart = new Cart(Stock);
 // cart.add(myTSHIRT2);     //  can add one tshirt object to products
 // cart.add(myTSHIRT3);     //  can add one tshirt object to products
 
+// cart.checkOut(80);       //  CHECKOUT pass the discount rate from 0 to 100
 // cart.checkOut(90);       //  CHECKOUT pass the discount rate from 0 to 100
+// cart.checkOut(100);      //  CHECKOUT pass the discount rate from 0 to 100
 
 // ---------
 
@@ -62,15 +66,17 @@ const cart = new Cart(Stock);
 // Example 2 :: buy one or multiply products from Stock
 // ----------------------------------------------------
 
-// cart.check(66);               //  takes Stock and adds a product by id to products from Stock list 
+cart.check(66);               //  takes Stock and adds a product by id to products from Stock list 
 
-// cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
-// cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
-// cart.check(229);              //  takes Stock and adds a product by id to products from Stock list 
+cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
+cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
+cart.check(229);              //  takes Stock and adds a product by id to products from Stock list 
 
 // cart.itemsChecked();          //  list of available items in products array
 
 // cart.checkOut(80);            //  CHECKOUT pass the discount rate from 0 to 100
+cart.checkOut(90);            //  CHECKOUT pass the discount rate from 0 to 100
+// cart.checkOut(100);           //  CHECKOUT pass the discount rate from 0 to 100
 
 // ---------
 
@@ -81,8 +87,10 @@ const cart = new Cart(Stock);
 
 // Example 3 :: buy all available products from Stock
 // -----------------------------------------------
-// cart.buyAll(80);              //  checks all products from Stock and checkout
-                                   //  with a discount rate from 0 to 100;
+// cart.buyAll(80);     // credit card       //  checks all products from Stock and checkout
+// cart.buyAll(90);     // money bank        //  checks all products from Stock and checkout
+// cart.buyAll(100);    // cash  flat rate   //  checks all products from Stock and checkout
+                                          //  with a discount rate from 0 to 100;
 
 // ---------
 
