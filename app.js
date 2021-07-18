@@ -23,6 +23,7 @@ console.log('\tSTART ===================================\n\n');
 const myTSHIRT1 = new TShirt(456, sizes.S, colors.Yellow, fabrics.Wool);
 const myTSHIRT2 = new TShirt(552, sizes.XL, colors.Red, fabrics.Silk);
 const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
+console.log(myTSHIRT1.toConsoleString());
 // console.log(myTSHIRT1);
 // console.log(myTSHIRT2);
 // console.log(myTSHIRT3);
@@ -88,7 +89,7 @@ const cart = new Cart(Stock);
 // cart.buyAll(80);     // credit card       //  checks all products from Stock and checkout
 // cart.buyAll(90);     // money bank        //  checks all products from Stock and checkout
 // cart.buyAll(100);    // cash  flat rate   //  checks all products from Stock and checkout
-                                             //  with a discount rate from 0 to 100;
+//  with a discount rate from 0 to 100;
 
 // ---------
 
@@ -96,6 +97,8 @@ const cart = new Cart(Stock);
 
 // Example 4 :: It needs to checkout once before making new order
 // -----------------------------------------------
+
+// console.log(cart.toConsoleString());
 
 // cart.add(myTSHIRT1);          //  can add one tshirt object to products
 // cart.add(myTSHIRT2);          //  can add one tshirt object to products
@@ -112,9 +115,9 @@ const cart = new Cart(Stock);
 // cart.add(myTSHIRT2);          //  can add one tshirt object to products
 
 // cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
-// cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
+cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
 
-// cart.checkOut(80);            //  rate: 0.8
+cart.checkOut(80);            //  rate: 0.8
 
 
 // ---------
@@ -122,8 +125,8 @@ const cart = new Cart(Stock);
 
 
 
-
-
+// console.log(Stock[1]);
+// console.log(Stock);
 
 
 

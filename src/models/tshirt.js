@@ -7,13 +7,15 @@ class TShirt {
     this.price = +(size.price + color.price + fabric.price).toFixed(2);
   }
 
-  toString = () => {
+  toConsoleString = () => {
     return (
-      `id:  this.id , 
-      ---------------------
-      size: ${this.size} ,
-      color: ${this.color} ,
-      fabric: ${this.fabric}`
+      `id:  ${this.id} , 
+      -----------------
+      size: ${this.size} 
+      color: ${this.color}
+      fabric: ${this.fabric}
+      -----------------
+      Base price: ${this.price}$\n`
     );
   }
 

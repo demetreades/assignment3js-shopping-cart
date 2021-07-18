@@ -47,6 +47,15 @@ class Cart {
   itemsChecked = () => {
     console.log(this.products, ':::: in cart:', this.products.length);
   }
+
+  toConsoleString = () => {
+    return (
+      `Stock:   ${this.stock.length} , 
+      products: ${this.products.length}
+      -----------------
+      total:    ${this.total}\n` 
+    );
+  }
   
 };
 
