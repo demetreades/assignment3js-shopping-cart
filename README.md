@@ -201,9 +201,9 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 ![get](./assets/img/get2.png)
 
-getAttribute(fabrics.Silk)
+`getAttribute(fabrics.Silk)`
 
-getAttribute(colors.Red)
+`getAttribute(colors.Red)`
 
 <br>
 
