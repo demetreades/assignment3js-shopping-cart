@@ -1,20 +1,30 @@
 {
   "name": "design-patterns",
-  "version": "0.1.0",
-  "description": "Assignment3 - Strategy Pattern",
-  "main": "main.js",
+  "version": "0.2.0",
+  "description": "AssignmentJS3 , Design Patterns",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon main.js",
-    "attribute": "nodemon ./src/models/attributes/main.js",
-    "manager": "nodemon ./src/models/manager.js",
-    "strategy": "nodemon ./src/models/strategy.js",
-    "strategies": "nodemon ./src/models/strategies.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js",
+
+    "attributes": "nodemon ./src/attributes/main.js",
+    "loops": "nodemon ./src/attributes/factory/attributes.js"
+    
+  },
+  "author": "quorum",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demetreades/Assignment3JS.git"
   },
   "keywords": [
-    "design",
-    "patterns"
+    "design-patterns",
+    "assignment"
   ],
-  "author": "quorum",
-  "license": "ISC"
+  "bugs": {
+    "url": "https://github.com/demetreades/Assignment3JS/issues"
+  },
+  "homepage": "https://github.com/demetreades/Assignment3JS#readme"
 }

@@ -1,8 +1,9 @@
 # DESIGN PATTERNS
 
- Jump to [Index](#index) ,
- class repo: [Assignment3JS](https://github.com/davidoster/Assignment3JS)
+![app](./assets/img/app.png)
 
+ Jump to [Index](#index) ,
+class repo: [Assignment3JS](https://github.com/davidoster/Assignment3JS)
 
 <br>
 
@@ -14,7 +15,7 @@
 
 😎
 
-# Clone [repo](https://github.com/demetreades/Assignment3JS.git)
+# Clone and start
 
       git clone https://github.com/demetreades/AssignmentJS3.git
 
@@ -22,44 +23,39 @@
 
 `npm run` to get the list of available scripts
 
-`npm start`
+`npm i && npm start`
 
+.
 
 <br>
 
 # QUICKSTART
 
+Start from `app.js` by running `npm start`
+
+The buying / checkout method with a given discount is described in the examples.
+Uncomment code snippets right under each three Example titles.
 <br>
 
 ### files
 
-`main.js` is the main file that starts and you will call your declared strategies, 
+`main.js` is the main file that starts via `start` command, you can create tshirts add them to a shopping card and checkout with a discount rate.
 
-`./src/models/strategies.js` is the file with the initial strategies that can be modified as needed.
-
-`./src/models/attributes/main.js` is the file with the attribute objects { colors, sizes, fabrics } that needed to make a TShirt with diffrent price for each attribute, where you can set get alter and add new attributes for the overall materials
+`./src/attributes/main.js` is the file with the attribute objects { colors, sizes, fabrics } that needed to make a `TShirt` with different price for each attribute, where you can set get alter and add new attributes for the overall materials.
 
 
-<br>
 
-### shop
+### cart object
 
-The `shop` object is the main object that can `add` by creating a new strategy 
-or`select` a strategy from a list of available strategies and on this selection 
-give an order of one or many `TShirst` items and `execute` that strategy as a payment method.
+The `cart` object is the main object that can `add` items in your shopping cart and finally `checkout` with a given plan as a discount.
 
-      //  EXECUTES
-      shop.select(1).execute();
-      shop.select(2).execute();
-      shop.select(3).execute();
-
+To create a `cart` object you need to pass a `Stock` object or any other array of `TShirt` objects as the list of current available products.
+on `checkout` creates a `new Order` object with each current strategy.
 
 <br>
 
- ![strategy](./src/assets/img/strategy.png)
+ ![buyall](./assets/img/buyall.png)
 
-
-<br>
 
 <br>
 
@@ -68,135 +64,39 @@ give an order of one or many `TShirst` items and `execute` that strategy as a pa
 
 <br>
 
-- [Clone and setup](#Clone-and-setup)
-  - [QUICKSTART](#quickstart)
-    - [shop](#shop)
-    - [files](#files)
-    - [main](#main)
-  - [Scripts](#scripts)
-  - [Folder structure](#folder-structure)
-- [Attributes](#attributes)
-  - [sizes](#sizes)
-  - [colors](#colors)
-  - [fabrics](#fabrics)
+- [Clone and start](#clone-and-start)
+- [QUICKSTART](#quickstart)
+  - [files](#files)
+  - [cart object](#cart-object)
+  - [scripts](#scripts)
 - [Formatting initial DATA](#formatting-initial-data)
-  - [DATA_Factory methods](#data-factory-methods)
-  - [attributes main.js](#attributes-mainjs)
-- [Payment strategy](#payment-strategy)
-  - [new StrategyManager](#new-strategymanager)
-    - [StrategyManager methods](#strategymanager-methods)
-  - [new Strategy](#new-strategy)
-    - [Strategy methods](#strategy-methods)
-- [Modules](#modules)
-    - [main.js](#main-js)
-    - [Strategies](#strategies)
-    - [Attributes](#attributes)
+- [Attributes](#attributes)
+  - [Attribute functions](#attribute-functions)
+- [Cart manager](#cart-manager)
+  - [Cart manager methods](#cart-manager-methods)
 
 <br>
 
 <br>
 
 
-## Scripts
+## scripts
 
 `npm run` for listing available scripts from `package.json` 
 
-      "scripts": 
-      {
+      "scripts": {
+      
+      "start": "nodemon app.js",
 
-      "start": "nodemon main.js",
+      "attributes": "nodemon ./src/attributes/main.js",
+      "loops": "nodemon ./src/attributes/factory/attributes.js"
 
-      "attribute": "nodemon ./src/models/attributes/main.js",
-      "manager": "nodemon ./src/models/manager.js",
-
-      "strategy": "nodemon ./src/models/strategy.js",
-      "strategies": "nodemon ./src/models/strategies.js",
-
-      }
+      },
 
 <br>
 
 
-      npm run <<script>> 
-
-
-
-<br>
-
-
-## main
-
-1. Strategy management main file
-
-            ./main.js
-
-2. Attributes managment main file
-
-            ./src/models/attributes/main.js
-
-
-<br>
-
-
-## Folder structure
-
-
-```
-root >
-
-
-      - main.js                     // [strategy] executable
-
-      > src > assets  >
-
-                      > img         // examples for markdown
-
-      > src > models  >
-
-                      > attributes  >
-
-                                    - main.js  // [attributes] executable
-
-                                    > models  > 
-                                            
-                                              - DATA_Factory.js
-
-                                              - tshirt.js
-
-                                              > factory > _DATA.js
-
-                                              > factory > colors.js
-
-                                              > factory > sizes.js
-
-                                              > factory > fabrics.js
-                      
-                      > strategies  > 
-                      
-                                    > strategy1.js
-
-                      - manager.js
-
-                      - strategies            // available strategies
-
-                      - strategy.js
-                      
-                    
-```
-
-
-<br>
-
-
-## Attributes
-
-{ size , color, fabric }
-
-Attributes are the options that needed to be passed to TShirt to produce a tshirt object. 
-
-Each attribute has a type property and a price property 
-
-can be accessed with dot notation `fabrics.Wool.type`, `colors.Red.price`
+      npm run < script > 
 
 
 <br>
@@ -204,22 +104,25 @@ can be accessed with dot notation `fabrics.Wool.type`, `colors.Red.price`
 
 ## Formatting initial DATA
 
-initial DATA are located at `./src/models/attributes/factory/_DATA.js`
+initial DATA are located at `./src/attributes/factory/_DATA.js`
 
 
 `formatter` adds price for every attribute
 
-function formatter(id, type, price)
+<br>
+
+formatter(id, type, price)
 
       function formatter(id, type, price) {
         return { id: id, type: type, price: price };
       }
 
+
 <br>
 
-looper(factory, data, price)  ```// takes new DATA_Factory```
+factoryLoop(factory, data, price)  
 
-      function looper(factory, data, price) {
+      function factoryLoop(factory, data, price) {
          for(item = 0; item < Object.keys(data).length; item++) {
          factory[Object.keys(data)[item]] = formatter(item+1, Object.values(data)[item], Object.values(price)[item]);
         }
@@ -227,26 +130,22 @@ looper(factory, data, price)  ```// takes new DATA_Factory```
 
 <br>
 
-loop occures in every new DATA_Factory we call for each attribute and all export to `attribute's main.js` for producing tshirts.
-
-<br>
-
 
  #### **sizes**
 
- ![sizes_object_sample](./src/assets/img/sizes_object_example.png) 
+ ![sizes_object_sample](./assets/img/sizes_object_example.png) 
  
  #### **colors**
 
- ![colors_object_sample](./src/assets/img/colors_object_example.png)
+ ![colors_object_sample](./assets/img/colors_object_example.png)
 
 #### **fabrics**
  
- ![fabrics_object_sample](./src/assets/img/fabrics_object_example.png)
+ ![fabrics_object_sample](./assets/img/fabrics_object_example.png)
 
 <br>
 
-data can be accessed via properties:
+Attribute's data can be accessed via its properties:
 
       fabrics.Linen.type   // 'LINEN'
 
@@ -259,13 +158,32 @@ data can be accessed via properties:
 
 <br>
 
+<br>
 
-## DATA Factory methods
 
-You can list, rename and set new attributes in `./src/models/attributes/main.js`
-here the basic attribute objects are created to be passed as arguments for creating a tshirt
+## Attributes
 
-if you use `TShirtGenerator()` you will create a `stock`  object with all tshirt variaties data from our given attributes that is exported to `./main.js`
+{ size , color, fabric }
+
+Attributes are the options that needed to be passed into TShirt to produce a tshirt object. 
+
+Each attribute has a type property and a price property 
+
+can be accessed via dot notation `fabrics.Wool.type`, `colors.Red.price`
+
+
+<br>
+
+
+### Attribute functions
+
+- You can list, rename and set new attributes in `./src/attributes/main.js`
+Basic attribute objects are created here to be passed as arguments for creating a tshirt.
+
+
+<br>
+
+`./src/attributes/factory/utilities.js`
 
       setAttribute(attribute :object, name :string, price :number)
 
@@ -279,261 +197,67 @@ if you use `TShirtGenerator()` you will create a `stock`  object with all tshirt
 
 <br>
 
+![get](./assets/img/get.png)
 
-## attributes mainjs
+getAttribute(fabrics.Silk)
 
-attributes { fabrics, colors, sizes }
-
-You can manipulate here attribute data and generate the tshirt stock with the available attributes.
-
-      ./src/models/attributes/main.js
-
-
-      npm run attribute 
+getAttribute(colors.Red)
 
 <br>
 
 
-## Payment strategy
+### Cart manager
 
-You need to pass an `order` object to strategies so you can execute a purchase.
+      ./src/models/cart.js
 
-      ./main.js
+      ./src/models/order.js
 
-
-      npm start
-
-<br>
+`Cart` produces the `cart` object that takes a `Stock` object and adds items into products array and `checkout` by creating a  `new Order`.
 
 
-### new StrategyManager
-
-`new StrategyManager()` produces the `shop` object that can add remove select a strategy from a list of available strategies
-
-      ./models/manager.js
-
-
-      npm run manager
-
-<br>
-
-
-### StrategyManager methods
 
 
 <br>
 
+
+### Cart manager methods
+
+
+<br>
+
+      calc()            //  updates total cart's amount after each addition 
       
-      add(strategy)
 
-Takes a new Strategy
+      add(product)      //  adds product in the products array
 
-Strategies are declared in `./src/models/strategies.js` the last argument of the `add()` method is a callBack so you can turn each new Strategy as code of block in every place is needed 
-
-<br>
-
-<br>
-
-
-
-      remove(index)
-
-Takes the index of a strategy
-
-<br>
-
-<br>
-
-
-
-
-      select(index? string? () ) 
-
-Selects a strategy from the list of available strategies.
-With no argument lists all available options, with String selects the value that matches from the list of available strategies and with passing a number intiger selects by id.
-
-<br>
-
-      toString()
-
-
-<br>
-
-
-### new Strategy
-
-`new Strategy(index, name, order, callBack)`
-
-new Strategies are declared in `./src/models/strategies.js`
-
-
-      ./models/strategy.js
-
-
-      npm run strategy
-
-<br>
-
-
-<br>
-
-
-#### Strategy methods
-
-
-<br>
-
-      execute() 
+      check(index)      //  returns the indexed item
       
-Executes the strategy by chaining after a succesful selection via `select()` method of an available strategy from `./src/models/strategies.js` or any newly added strategies from `add()` method.
 
-<br>
-
-      buyOneTShirt(index , stock: tshirts object)
-
-
-Buys a single tshirt by `id` from `stock`, can be pass as argument in `add()` strategy
-
-<br>
+      buyAll(rate)      //  add all available products into products array
+                        //  and checkouts with a given discount as a precentage
+                        //  rate 0 to 100
 
 
-<br>
+      itemsChecked()    //  lists all added products in products array
 
-      toString()
+      checkOut(rate)    //  creates a new Order with a discount as rate
+                        //  and empties products array
+                        //  rate 0 to 100
 
 
 <br>
 
+![checkout](./assets/img/strategy2.png)
 
-### Modules
-#
-
-#### main js
-
-Main app, execute strategies from here
-
-{ stock, shop } -> main.js -> X
+`checkOut(80)`
 
 <br>
 
+![cart](./assets/img/cart.png)
 
-### Strategies
-#
-
-
-#### manager.js
-`shop` creates here and exports to strategies
-
-      X -> manager.js -> StrategyManager, 1shop
-
-#### strategy.js
-`Strategy` exports to `strategies.js` to be used as parameter on `add()`
-
-      X -> strategy.js -> Strategy
-
-#### strategies.js
-create here new strategies on `shop` object
-
-      { stock, 2shop } Strategy -> strategies.js -> 3shop
-
-
+`itemsChecked()`
 
 <br>
-
-
-### Attributes
-#
-
-#### _DATA.js
-Initial `DATA` price added
-
-      X -> _DATA.js -> { 
-            COLOR_DATA COLOR_PRICE, 
-            SIZE_DATA, SIZE_PRICE, 
-            FABRIC_DATA 
-            FABRIC_PRICE 
-      }
-
-#### DATA_Factory.js
-`DATA` formatting
-
-      _DATA { ALLDATA } TShirt -> DATA_FACTORY -> { 
-            DATA_Factory, 
-            formatter, 
-            looper, 
-            getAttribute, 
-            setAttribute, 
-            TShirtGenerator, 
-      }
-
-<br>
-
-
-#### tshirt.js
-exports `TShirst` to `DATA_Factory`
-
-      X -> tshirt.js -> TShirt
-
-<br>
-
-
-#### sizies.js
-creates `sizes` from `looper() DATA_Factory`
-
-      DATA_Factory { 
-            DATA_Factory, 
-            SIZE_DATA, 
-            SIZE_PRICE, 
-            looper 
-      } -> sizes.js ->
-      
-       _DATA {
-            SIZE_DATA, 
-            SIZE_PRICE 
-      } -> sizes.js
-
-<br>
-
-
-#### colors.js
-creates `colors` from `looper() DATA_Factory`
-
-      DATA_Factory { 
-            DATA_Factory, 
-            looper 
-      } -> colors.js 
-
-      _DATA {
-            COLOR_DATA, 
-            COLOR_PRICE 
-      } -> colors.js
-
-<br>
-
-
-#### fabrics.js
-creates `fabrics` from `looper() DATA_Factory`
-
-      DATA_Factory { 
-            DATA_Factory, 
-            FABRIC_DATA, 
-            FABRIC_PRICE, 
-            looper 
-      } -> fabrics.js
-
-       _DATA {
-            FABRIC_DATA, 
-            FABRIC_PRICE 
-      } -> fabrics.js
-
-<br>
-
-
-#### main.js
-creates `stock` from `TShirtGenerator()`
-
-
-      DATA_Factory { TShirtGenerator } -> attributes main.js -> stock
 
 <br>
 
