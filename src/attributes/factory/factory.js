@@ -3,9 +3,9 @@ function formatter(id, type, price) {
 }
 
 function factoryLoop(object, data, price) {
-  for(item = 0; item < Object.keys(data).length; item++) {
-   object[Object.keys(data)[item]] = formatter(item+1, Object.values(data)[item], Object.values(price)[item]);
-  }
+  Object.values(data).forEach((value, index) => {
+    object[Object.keys(data)[index]] = formatter(index+1, Object.values(data)[index], Object.values(price)[index]);
+  })
   return object;
 };
 

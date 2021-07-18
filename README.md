@@ -109,7 +109,7 @@ on `checkout` creates a `new Order` object witch that takes the payment strategy
 initial DATA are located at `./src/attributes/factory/_DATA.js`
 
 
-`formatter` creates a new object and adds price as property for every attribute
+`formatter` creates a new object and adds price as property for every attribute in DATA
 
 <br>
 
@@ -149,13 +149,13 @@ factoryLoop(factory, data, price)
 
 Attribute's data can be accessed via its properties:
 
-      fabrics.Linen.type   // 'LINEN'
+      fabrics.Linen.type   //  'LINEN'
 
-      fabrics.Linen.price  // 2.7
+      fabrics.Linen.price  //  2.7
 
-      colors.Indigo.type   // 'INDIGO'
+      colors.Indigo.type   //  'INDIGO'
 
-      colors.Indigo.price  // 0.6
+      colors.Indigo.price  //  0.6
 
 
 <br>
@@ -273,6 +273,13 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 <br>
 
+<br>
+
+<br>
+
+<br>
+
+<br>
 
 <br>
 
