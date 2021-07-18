@@ -16,12 +16,10 @@ const {
 
 
 
-
-
-
 // ////////////////////////////////////////////////////////////////////// //
 //                              MAIN APP                                  //
 // ////////////////////////////////////////////////////////////////////// //
+
 
 console.log('\n\t^                                  app.js');
 console.log('\tSTART ===================================\n\n');
@@ -42,7 +40,7 @@ const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
 
 
 
-// Generates Stock object
+// Generates Stock object with all available variations of a tshirt.
 // --------------------------------------------------------------------
 const Stock = TShirtGenerator([], colors, sizes, fabrics);
 
@@ -56,7 +54,6 @@ const Stock = TShirtGenerator([], colors, sizes, fabrics);
 const cart = new Cart(Stock);
 
 
-
 // Example 1.1 :: can add one or multiple tshirt items into products array
 // ---------------------------------------------------------------------
 
@@ -64,6 +61,8 @@ const cart = new Cart(Stock);
 // cart.add(myTSHIRT2);     //  can add one tshirt object to products
 // cart.add(myTSHIRT3);     //  can add one tshirt object to products
 
+
+// ---------
 
 
 // Example 1.2 :: add a random generated tshirt
@@ -115,7 +114,6 @@ const cart = new Cart(Stock);
 // cart.buyAll(100);    // cash , flat rate   //  checks all products from Stock and checkout
                                               //  with a discount rate from 0 to 100;
 
-                                             
 // ---------
 
 
@@ -162,4 +160,17 @@ console.log('\n\t===================================== END\n\n');
 // ////////////////////////////////////////////////////////////////////// //
 //                                                              END       //
 // ////////////////////////////////////////////////////////////////////// //
+
+
+
+
+
+
+
+
+
+//
+
+
+
 
