@@ -9,7 +9,7 @@ class TShirt {
 
   toConsoleString = () => {
     return (
-      `id:  ${this.id} , 
+      ` id:  ${this.id}# 
       -----------------
       size: ${this.size} 
       color: ${this.color}
