@@ -50,7 +50,7 @@ Uncomment code snippets right under each three Example titles.
 The `cart` object is the main object that can `add` items in your shopping cart and finally `checkout` with a given plan as a discount.
 
 To create a `cart` object you need to pass a `Stock` object or any other array of `TShirt` objects as the list of current available products.
-on `checkout` creates a `new Order` object with that takes the payment strategy we apply and the `products` base price added from the `cart`.
+on `checkout` creates a `new Order` object witch that takes the payment strategy we apply and the `products` base price added from the `cart`.
 
 <br>
 
