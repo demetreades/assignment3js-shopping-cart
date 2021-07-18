@@ -34,7 +34,7 @@ class repo: [Assignment3JS](https://github.com/davidoster/Assignment3JS)
 Start from `app.js` by running `npm start`
 
 The buying / checkout method with a given discount is described in the examples.
-Uncomment code snippets right under each three Example titles.
+Uncomment code snippets right under each Example title.
 <br>
 
 ### files
