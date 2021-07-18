@@ -1,5 +1,5 @@
 class TShirt {
-  constructor(id, size, color, fabric) {
+  constructor(id, color, size, fabric) {
     this.id = id;
     this.size = size.type;
     this.color = color.type;
@@ -8,6 +8,7 @@ class TShirt {
   }
 
   toConsoleString = () => {
+    this.calc();
     return (
       ` id:  ${this.id}# 
       -----------------
@@ -22,6 +23,19 @@ class TShirt {
 };
 
 
+function randomTShirtGenerator(range, colors, sizes, fabrics) {
+  random = Math.floor(Math.random() * range);
+  // console.log(random, ' :: RANDOM NUMBER!');
+  return new TShirt(
+    +(Math.random() * (random * range * 10)).toFixed(0) + 1,
+    Object.values(sizes)[random],
+    Object.values(colors)[random],
+    Object.values(fabrics)[random],
+  );
+  
+};
+
+
 function TShirtGenerator(array, colors, sizes, fabrics) {
   Object.values(colors).forEach(color => {
     Object.values(sizes).forEach(size => {
@@ -30,13 +44,19 @@ function TShirtGenerator(array, colors, sizes, fabrics) {
       });
     });
   });
+  
   return array;
+  
 };
 
 
 
 
 module.exports = { 
+  
   TShirt,
-  TShirtGenerator 
+  
+  TShirtGenerator, 
+  randomTShirtGenerator
+
 };

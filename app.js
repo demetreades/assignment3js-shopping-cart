@@ -1,7 +1,12 @@
-// const { sizes, colors, fabrics } = require('./src/attributes/factory/attributes');
 const { sizes, colors, fabrics } = require('./src/attributes/main');
 const { Cart } = require('./src/models/cart');
-const { TShirt, TShirtGenerator } = require('./src/models/tshirt');
+
+const { 
+  TShirt, 
+  TShirtGenerator, 
+  randomTShirtGenerator 
+} = require('./src/models/tshirt');
+
 
 
 
@@ -31,7 +36,6 @@ const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
 
 
 
-
 // Generates Stock object
 // --------------------------------------------------------------------
 const Stock = TShirtGenerator([], colors, sizes, fabrics);
@@ -47,12 +51,24 @@ const cart = new Cart(Stock);
 
 
 
-// Example 1 :: can add one or multiple tshirt items into products array
+// Example 1.1 :: can add one or multiple tshirt items into products array
 // ---------------------------------------------------------------------
 
 // cart.add(myTSHIRT1);     //  can add one tshirt object to products
 // cart.add(myTSHIRT2);     //  can add one tshirt object to products
 // cart.add(myTSHIRT3);     //  can add one tshirt object to products
+
+
+
+// Example 1.2 :: add a random generated tshirt
+// ---------------------------------------------------------------------
+
+// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics))     //  ( array, range, colors, sizes, fabrics )
+// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics))     //  ( array, range, colors, sizes, fabrics )
+// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics))     //  ( array, range, colors, sizes, fabrics )
+
+
+// console.log(cart.toConsoleString());
 
 // cart.checkOut(80);       //  CHECKOUT pass the discount rate from 0 to 100
 // cart.checkOut(90);       //  CHECKOUT pass the discount rate from 0 to 100
@@ -69,13 +85,11 @@ const cart = new Cart(Stock);
 
 // cart.check(26);               //  takes Stock and adds a product by id to products from Stock list 
 
-// cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
+// cart.check(81).check(9);      //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(229);              //  takes Stock and adds a product by id to products from Stock list 
 
 // cart.itemsChecked();          //  list of available items in products array
-
-// console.log(cart.toConsoleString());
 
 
 // cart.checkOut(80);            //  CHECKOUT pass the discount rate from 0 to 100
@@ -95,12 +109,13 @@ const cart = new Cart(Stock);
 // cart.buyAll(100);    // cash  flat rate   //  checks all products from Stock and checkout
                                              //  with a discount rate from 0 to 100;
 
+                                             
 // ---------
 
 
 
-// Example 4 :: It needs to checkout once before making new order
-// --------------------------------------------------------------
+// Example 4 :: Cart empties after each checkout
+// ---------------------------------------------
 
 // cart.add(myTSHIRT1);          //  can add one tshirt object to products
 // cart.add(myTSHIRT2);          //  can add one tshirt object to products
@@ -113,7 +128,6 @@ const cart = new Cart(Stock);
 
 // cart.buyAll(80);              //  checks all products from Stock and checkout
                                  //  with a discount rate from 0 to 100;
-
 
 // cart.add(myTSHIRT2);          //  can add one tshirt object to products
 

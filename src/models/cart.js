@@ -12,14 +12,14 @@ class Cart {
     this.total = 0;
     console.log(`\n${text} ----------\n`);
     this.products.forEach((tshirt, index) => {
-      console.log(`${index+1}.    PRODUCT #${tshirt.id}: \t| price: ${tshirt.price}$ \t| size: ${tshirt.size} \t| color: ${tshirt.color} \t| fabric: ${tshirt.fabric}\t\t::: ADDED TO YOUR CART`);
+      console.log(`${index+1}.    PRODUCT #${tshirt.id}: \t| price: ${tshirt.price}$ \t| size: ${tshirt.size} \t| color: ${tshirt.color}      \t| fabric: ${tshirt.fabric}  \t ::   ADDED TO YOUR CART`);
       this.total = this.total + tshirt.price;
     });
   }
 
   add(product) {
     this.products = [...this.products, product];
-    console.log(`ADD PRODUCT  id: ${product.id} , size: ${product.size} .\n`);
+    console.log(`ADD PRODUCT  id: ${product.id} , \tsize: ${product.size}, \tcolor: ${product.color} ,  \tfabric: ${product.fabric} ,    \tPRICE: ${product.price}$ \n`);
   }
 
   check(index) {

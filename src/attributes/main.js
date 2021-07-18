@@ -1,4 +1,4 @@
-const { fabrics, colors, sizes } = require('./factory/attributes');
+const { sizes, colors, fabrics } = require('./factory/attributes');
 
 const { 
   setAttribute, 
@@ -21,7 +21,6 @@ const {
 // You can add new properties 
 // Careful when you add attributes and you want to generate later all combinations
 // -------------------------------------------
-
 
 
 

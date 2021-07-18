@@ -54,7 +54,9 @@ on `checkout` creates a `new Order` object witch that takes the payment strategy
 
 <br>
 
- ![buyall](./assets/img/buyall2.png)
+ ![buyall](./assets/img/buyall.png)
+
+`buyAll(90)`
 
 
 <br>
@@ -216,6 +218,12 @@ getAttribute(colors.Red)
 
 `Order` calculates total attribute cost per item with labor and the given discount on checkout.
 
+`TShirt` Produces a tshirt object.
+
+      // range: 7 as the attributes array length 
+      randomTShirtGenerator(range, colors, sizes, fabrics)    
+
+      TShirtGenerator(array, colors, sizes, fabrics)
 
 
 
@@ -249,7 +257,7 @@ getAttribute(colors.Red)
 
 <br>
 
-![checkout](./assets/img/strategy3.png)
+![checkout](./assets/img/checkout.png)
 
 `checkOut(90)`
 
