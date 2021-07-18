@@ -39,9 +39,9 @@ Uncomment code snippets right under each Example title.
 
 ### files
 
-`main.js` is the main file that starts via `start` command, you can create tshirts add them to a shopping card and checkout with a discount rate.
+`main.js` is the main file that starts via `start` command, you can create tshirts add them to a shopping cart and checkout with a discount rate depended the materials and labor rate.
 
-`./src/attributes/main.js` is the file with the attribute objects { colors, sizes, fabrics } that needed to make a `TShirt` with different price for each attribute, where you can set get alter and add new attributes for the overall materials.
+`./src/attributes/main.js` is the file with the attribute objects { colors, sizes, fabrics } that needed for making a `TShirt` with different prices for each attribute, where you can set get alter and add new attributes for the overall materials.
 
 
 
@@ -109,7 +109,7 @@ on `checkout` creates a `new Order` object witch that takes the payment strategy
 initial DATA are located at `./src/attributes/factory/_DATA.js`
 
 
-`formatter` adds price for every attribute
+`formatter` creates a new object and adds price as property for every attribute
 
 <br>
 
@@ -167,11 +167,11 @@ Attribute's data can be accessed via its properties:
 
 { size , color, fabric }
 
-Attributes are the options that needed to be passed into TShirt to produce a tshirt object. 
+Attributes are the options that needed to be passed into `TShirt` to produce a tshirt object. 
 
 Each attribute has a type property and a price property 
 
-can be accessed via dot notation `fabrics.Wool.type`, `colors.Red.price`
+that can be accessed via dot notation `fabrics.Wool.type`, `colors.Red.price`
 
 
 <br>
@@ -179,7 +179,7 @@ can be accessed via dot notation `fabrics.Wool.type`, `colors.Red.price`
 
 ### Attribute functions
 
-- You can list, rename and set new attributes in `./src/attributes/main.js`
+- You can list, rename and set new attributes at `./src/attributes/main.js`
 Basic attribute objects are created here to be passed as arguments for creating a tshirt.
 
 
@@ -218,9 +218,9 @@ getAttribute(colors.Red)
 
 `Order` calculates total attribute cost per item with labor and the given discount on checkout.
 
-`TShirt` Produces a tshirt object.
+`TShirt` Produces a tshirt object that can be pass to cart for checkout.
 
-      // range: 7 as the attributes array length 
+      // range: 7 as the attribute's array length 
       randomTShirtGenerator(range, colors, sizes, fabrics)    
 
       TShirtGenerator(array, colors, sizes, fabrics)
