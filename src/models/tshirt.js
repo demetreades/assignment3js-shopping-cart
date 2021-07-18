@@ -22,7 +22,7 @@ class TShirt {
 };
 
 
-function TShirtGenerator(colors, sizes, fabrics, array = []) {
+function TShirtGenerator(array, colors, sizes, fabrics) {
   Object.values(colors).forEach(color => {
     Object.values(sizes).forEach(size => {
       Object.values(fabrics).forEach(fabric => {

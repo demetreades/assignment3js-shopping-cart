@@ -23,17 +23,13 @@ const {
 
 
 const sizes   = factoryLoop({}, SIZE_DATA, SIZE_PRICE)
+
 const colors  = factoryLoop({}, COLOR_DATA, COLOR_PRICE)
+
 const fabrics = factoryLoop({}, FABRIC_DATA, FABRIC_PRICE)
 
 
 
-
-// console.log(sizes,   ' ::::::::: \n');
-
-// console.log(colors,  ' ::::::::: \n')
-
-// console.log(fabrics, ' ::::::::: \n');
 
 
 // console.log(fabrics.Wool.type);

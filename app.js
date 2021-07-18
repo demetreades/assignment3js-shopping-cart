@@ -12,7 +12,7 @@ const { TShirt, TShirtGenerator } = require('./src/models/tshirt');
 //                              MAIN APP                                  //
 // ////////////////////////////////////////////////////////////////////// //
 
-console.log('\n\t                                   app.js');
+console.log('\n\t^                                  app.js');
 console.log('\tSTART ===================================\n\n');
 
 
@@ -34,9 +34,9 @@ const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
 
 // Generates Stock object
 // --------------------------------------------------------------------
-const Stock = TShirtGenerator(colors, sizes, fabrics, []);
+const Stock = TShirtGenerator([], colors, sizes, fabrics);
 
-// console.log(Stock);      //  all products
+// console.log(Stock);      //  all products array
 // --------------------------------------------------------------------
 
 
@@ -44,12 +44,11 @@ const Stock = TShirtGenerator(colors, sizes, fabrics, []);
 // Cart
 // --------------------------------------------------------------------
 const cart = new Cart(Stock);
-// console.log(Stock);
 
 
 
 // Example 1 :: can add one or multiple tshirt items into products array
-// ----------------------------------------------------
+// ---------------------------------------------------------------------
 
 // cart.add(myTSHIRT1);     //  can add one tshirt object to products
 // cart.add(myTSHIRT2);     //  can add one tshirt object to products
@@ -58,6 +57,7 @@ const cart = new Cart(Stock);
 // cart.checkOut(80);       //  CHECKOUT pass the discount rate from 0 to 100
 // cart.checkOut(90);       //  CHECKOUT pass the discount rate from 0 to 100
 // cart.checkOut(100);      //  CHECKOUT pass the discount rate from 0 to 100
+
 
 // ---------
 
@@ -77,6 +77,7 @@ const cart = new Cart(Stock);
 
 // console.log(cart.toConsoleString());
 
+
 // cart.checkOut(80);            //  CHECKOUT pass the discount rate from 0 to 100
 // cart.checkOut(90);            //  CHECKOUT pass the discount rate from 0 to 100
 // cart.checkOut(100);           //  CHECKOUT pass the discount rate from 0 to 100
@@ -87,19 +88,19 @@ const cart = new Cart(Stock);
 
 
 // Example 3 :: buy all available products from Stock
-// -----------------------------------------------
+// --------------------------------------------------
 
-cart.buyAll(80);     // credit card       //  checks all products from Stock and checkout
+// cart.buyAll(80);     // credit card       //  checks all products from Stock and checkout
 // cart.buyAll(90);     // money bank        //  checks all products from Stock and checkout
 // cart.buyAll(100);    // cash  flat rate   //  checks all products from Stock and checkout
-//  with a discount rate from 0 to 100;
+                                             //  with a discount rate from 0 to 100;
 
 // ---------
 
 
 
 // Example 4 :: It needs to checkout once before making new order
-// -----------------------------------------------
+// --------------------------------------------------------------
 
 // cart.add(myTSHIRT1);          //  can add one tshirt object to products
 // cart.add(myTSHIRT2);          //  can add one tshirt object to products
@@ -108,8 +109,9 @@ cart.buyAll(80);     // credit card       //  checks all products from Stock and
 // cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(229);    
+// cart.checkOut(90);            //  rate: 0.9
 
-// cart.buyAll(90);              //  checks all products from Stock and checkout
+// cart.buyAll(80);              //  checks all products from Stock and checkout
                                  //  with a discount rate from 0 to 100;
 
 
@@ -118,7 +120,7 @@ cart.buyAll(80);     // credit card       //  checks all products from Stock and
 // cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
 
-// cart.checkOut(80);            //  rate: 0.8
+// cart.checkOut(100);           //  rate: 1 no profit
 
 
 // ---------
