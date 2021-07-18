@@ -88,7 +88,7 @@ const cart = new Cart(Stock);
 // cart.buyAll(80);     // credit card       //  checks all products from Stock and checkout
 // cart.buyAll(90);     // money bank        //  checks all products from Stock and checkout
 // cart.buyAll(100);    // cash  flat rate   //  checks all products from Stock and checkout
-                                          //  with a discount rate from 0 to 100;
+                                             //  with a discount rate from 0 to 100;
 
 // ---------
 
@@ -97,19 +97,19 @@ const cart = new Cart(Stock);
 // Example 4 :: It needs to checkout once before making new order
 // -----------------------------------------------
 
-// cart.add(myTSHIRT1);     //  can add one tshirt object to products
-// cart.add(myTSHIRT2);     //  can add one tshirt object to products
-// cart.add(myTSHIRT3);     //  can add one tshirt object to products
+// cart.add(myTSHIRT1);          //  can add one tshirt object to products
+// cart.add(myTSHIRT2);          //  can add one tshirt object to products
+// cart.add(myTSHIRT3);          //  can add one tshirt object to products
 
 // cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(229);    
 
-// cart.buyAll(90);     // money bank        //  checks all products from Stock and checkout
-//  with a discount rate from 0 to 100;
+// cart.buyAll(90);              //  checks all products from Stock and checkout
+                                 //  with a discount rate from 0 to 100;
 
 
-// cart.add(myTSHIRT2);     //  can add one tshirt object to products
+// cart.add(myTSHIRT2);          //  can add one tshirt object to products
 
 // cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list 
 // cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list 
