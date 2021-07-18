@@ -6,7 +6,6 @@ const {
   fabrics 
 } = require('./src/attributes/main');
 
-
 const { 
   TShirt, 
   TShirtGenerator, 
@@ -162,15 +161,4 @@ console.log('\n\t===================================== END\n\n');
 // ////////////////////////////////////////////////////////////////////// //
 
 
-
-
-
-
-
-
-
 //
-
-
-
-
