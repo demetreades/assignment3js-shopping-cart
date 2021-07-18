@@ -35,18 +35,14 @@ const {
 // 2.
 // -----------------------
 
-// setAttribute(fabrics, 'Silk', 999)
 // setAttribute(sizes, 'SUPER', 0.8)
-// setAttribute(sizes, 'xsmall', 0.1)
-// setAttribute(sizes, 'lsmall', 0.1)
+// setAttribute(sizes, 'ZUPER', 0.7)
 
 
 // setAttribute(fabrics, 'sanel', 55)
-// setAttribute(fabrics, 'rugs', 0.1)
 // setAttribute(fabrics, 'Polymethyl', 22)
 
 // setAttribute(colors, 'gold', 2.2)
-// setAttribute(colors, 'silver', 0.9)
 // setAttribute(colors, 'black', 1)
 
 
