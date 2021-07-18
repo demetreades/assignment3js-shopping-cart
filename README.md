@@ -41,7 +41,7 @@ Uncomment code snippets right under each Example title.
 
 `main.js` is the main file that starts via `start` command, you can create tshirts add them to a shopping cart and checkout with a discount rate depended the materials and labor rate.
 
-`./src/attributes/main.js` is the file with the attribute objects { colors, sizes, fabrics } that needed for making a `TShirt` with different prices for each attribute, where you can set get alter and add new attributes for the overall materials.
+`./src/attributes/main.js` is the file with the attribute objects { colors, sizes, fabrics } that needed for making a `TShirt` with different prices for each attribute, where you can set get alter and add new attributes.
 
 
 
@@ -171,8 +171,13 @@ Attributes are the options that needed to be passed into `TShirt` to produce a t
 
 Each attribute has a type property and a price property 
 
-that can be accessed via dot notation `fabrics.Wool.type`, `colors.Red.price`
+that can be accessed via dot notation 
 
+      fabrics.Wool.type  //  'WOOL'
+
+      colors.Red.price   //  0.5
+
+      sizes.XS.type      //  'XS'
 
 <br>
 
