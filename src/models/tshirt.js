@@ -21,24 +21,19 @@ class TShirt {
 
 };
 
-
-function TShirtGenerator(Color, Size, Fabric, array = []) {
-  let sizeOfColors = Object.keys(Color).length
-  for(let i = 0; i < sizeOfColors; i++) {
-    for(let j = 0; j < sizeOfColors; j++) {
-      for(let k = 0; k < sizeOfColors; k++) {
-        array.push(
-               new TShirt
-                (
-                  array.length, 
-                  Object.values(Color)[i], 
-                  Object.values(Size)[j], 
-                  Object.values(Fabric)[k]
-                )
-              );
-          }
-      }
-  }
+function TShirtGenerator(colors, sizes, fabrics, array = []) {
+let count = 0;
+  Object.values(colors).forEach(color => {
+    console.log(color);
+    Object.values(sizes).forEach(size => {
+      console.log(size);
+      Object.values(fabrics).forEach(fabric => {
+        count++
+        console.log(fabric);
+        array.push(new TShirt(count, color, size, fabric))
+      });
+    });
+  });
   return array;
 };
 

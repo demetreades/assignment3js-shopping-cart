@@ -44,6 +44,7 @@ const Stock = TShirtGenerator(colors, sizes, fabrics, []);
 // Cart
 // --------------------------------------------------------------------
 const cart = new Cart(Stock);
+console.log(Stock);
 
 
 
