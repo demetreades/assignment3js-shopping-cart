@@ -3,7 +3,7 @@
 ![app](./assets/img/app2.png)
 
  Jump to [Index](#index) ,
-class repo: [Assignment3JS](https://github.com/davidoster/Assignment3JS)
+class repo: [Assignment3JS](https://github.com/davidoster/Assignment3JS).
 
 <br>
 
@@ -19,13 +19,13 @@ class repo: [Assignment3JS](https://github.com/davidoster/Assignment3JS)
 
       git clone https://github.com/demetreades/AssignmentJS3.git
 
-`cd` into proper folder 
+`cd` into proper folder.
 
-`npm run` to get the list of available scripts
+`npm run` to get the list of available scripts.
 
 `npm i && npm start`
 
-.
+
 
 <br>
 
@@ -77,14 +77,17 @@ on `checkout` creates a `new Order` object witch that takes the payment strategy
 - [Cart manager](#cart-manager)
   - [Cart manager methods](#cart-manager-methods)
 
+
 <br>
+
+.
 
 <br>
 
 
 ## scripts
 
-`npm run` for listing available scripts from `package.json` 
+`npm run` for listing available scripts from `package.json`. 
 
       "scripts": {
       
@@ -113,7 +116,7 @@ initial DATA are located at `./src/attributes/factory/_DATA.js`
 
 <br>
 
-formatter(id, type, price)
+formatter(id, type, price);
 
       function formatter(id, type, price) {
         return { id: id, type: type, price: price };
@@ -122,7 +125,7 @@ formatter(id, type, price)
 
 <br>
 
-factoryLoop(factory, data, price)  
+factoryLoop(factory, data, price);  
 
       function factoryLoop(object, data, price) {
          Object.values(data).forEach((value, index) => {
@@ -150,13 +153,13 @@ factoryLoop(factory, data, price)
 
 Attribute's data can be accessed via its properties:
 
-      fabrics.Linen.type   //  'LINEN'
+      fabrics.Linen.type;   //  'LINEN'
 
-      fabrics.Linen.price  //  2.7
+      fabrics.Linen.price;  //  2.7
 
-      colors.Indigo.type   //  'INDIGO'
+      colors.Indigo.type;   //  'INDIGO'
 
-      colors.Indigo.price  //  0.6
+      colors.Indigo.price;  //  0.6
 
 
 <br>
@@ -171,8 +174,7 @@ Attribute's data can be accessed via its properties:
 Attributes are the options that needed to be passed into `TShirt` to produce a tshirt object. 
 
 Each attribute has a type property and a price property 
-
-that can be accessed via dot notation 
+that can be accessed via dot notation. 
 
       fabrics.Wool.type  //  'WOOL'
 
@@ -201,7 +203,7 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
       getAttribute(sizies.L);
 
-      listAttributes(...attributes);  , Accepts multiple attributes
+      listAttributes(...attributes);       //   Accepts multiple attributes
 
 <br>
 
@@ -224,7 +226,7 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 `Order` calculates total attribute cost per item with labor and the given discount on checkout.
 
-`TShirt` Produces a tshirt object that can be pass to cart for checkout.
+`TShirt` Produces one or multiple tshirt objects that can be passed to `cart` for checkout.
 
       // range: 7 as the attribute's array length 
       randomTShirtGenerator(range, colors, sizes, fabrics); 
@@ -243,27 +245,28 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
       cart              //  The object
 
-      --------------    //  methods   ---------------------------------------
 
-      calc()            //  updates total cart's amount after each addition 
+      --------------    //  methods    --------------------------------------
+
+
+      calc()            //  updates total cart's amount
       
 
       add(product)      //  adds product in the products array
 
-      check(index)      //  returns the indexed item
+      check(index)      //  returns the indexed item and pushes it into the products array
       
 
-      buyAll(rate)      //  add all available products into products array
+      buyAll(rate)      //  adds all available products into products array
                         //  and checkouts with a given discount as a precentage
                         //  rate 0 to 100
 
 
-      itemsChecked()    //  lists all added products in products array
+      itemsChecked()    //  lists all pushed products into products array
 
-      checkOut(rate)    //  creates a new Order with a discount as rate
-                        //  and empties products array
+      checkOut(rate)    //  creates a new Order withdiscount rate
+                        //  completes the purchase and empties products array
                         //  rate 0 to 100
-
 
 <br>
 
@@ -283,16 +286,7 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 <br>
 
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<br>
+.
 
 ---
-
 Back to [Index](#index).
