@@ -26,7 +26,7 @@ console.log('\tSTART ===================================\n\n');
 
 
 // ONE TSHIRT
-// --------------------------------------------------------------------
+// -----------------------------------------------------------------
 const myTSHIRT1 = new TShirt(456, sizes.S, colors.Yellow, fabrics.Wool);
 const myTSHIRT2 = new TShirt(552, sizes.XL, colors.Red, fabrics.Silk);
 const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
@@ -34,16 +34,16 @@ const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
 // console.log(myTSHIRT1.toConsoleString());
 // console.log(myTSHIRT2);
 // console.log(myTSHIRT3);
-// --------------------------------------------------------------------
+// -----------------------------------------------------------------
 
 
 
 // Generates Stock object with all available variations of a tshirt.
-// --------------------------------------------------------------------
+// -----------------------------------------------------------------
 const Stock = TShirtGenerator([], colors, sizes, fabrics);
 
 // console.log(Stock);      //  all products array
-// --------------------------------------------------------------------
+// -----------------------------------------------------------------
 
 
 
@@ -53,7 +53,7 @@ const cart = new Cart(Stock);
 
 
 // Example 1.1 :: can add one or multiple tshirt items into products array
-// ---------------------------------------------------------------------
+// -----------------------------------------------------------------------
 
 // cart.add(myTSHIRT1);     //  can add one tshirt object to products
 // cart.add(myTSHIRT2);     //  can add one tshirt object to products
@@ -64,7 +64,7 @@ const cart = new Cart(Stock);
 
 
 // Example 1.2 :: add a random generated tshirt
-// ---------------------------------------------------------------------
+// --------------------------------------------
 
 // cart.add(randomTShirtGenerator(7, colors, sizes, fabrics))     //  ( array, range, colors, sizes, fabrics )
 // cart.add(randomTShirtGenerator(7, colors, sizes, fabrics))     //  ( array, range, colors, sizes, fabrics )
@@ -116,8 +116,8 @@ const cart = new Cart(Stock);
 
 
 
-// Example 4 :: Cart empties after each checkout
-// ---------------------------------------------
+// Example 4 :: Products in Cart empties after each checkout / order
+// -----------------------------------------------------------------
 
 // cart.add(myTSHIRT1);          //  can add one tshirt object to products
 // cart.add(myTSHIRT2);          //  can add one tshirt object to products
@@ -148,11 +148,10 @@ const cart = new Cart(Stock);
 
 
 
-
 // --------------------------------------------------------------------
 
 
-console.log('\n\t===================================== END\n\n');
+console.log('\n\n\t===================================== END\n\n');
 
 
 // ////////////////////////////////////////////////////////////////////// //

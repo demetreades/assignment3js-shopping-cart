@@ -8,7 +8,7 @@ class TShirt {
   }
 
   toConsoleString = () => {
-    this.calc();
+    this.prototype.calc();
     return (
       ` id:  ${this.id}# 
       -----------------

@@ -11,6 +11,10 @@ function factoryLoop(object, data, price) {
 
 
 
+// Object.defineProperty()
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+
+
 module.exports = {
 
   formatter,

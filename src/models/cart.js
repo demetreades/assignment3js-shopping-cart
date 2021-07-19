@@ -19,7 +19,7 @@ class Cart {
 
   add(product) {
     this.products = [...this.products, product];
-    console.log(`ADD PRODUCT  id: ${product.id} , \tsize: ${product.size}, \tcolor: ${product.color} ,  \tfabric: ${product.fabric} ,    \tPRICE: ${product.price}$ \n`);
+    console.log(`ADD PRODUCT  id: ${product.id} , \tsize: ${product.size}, \tcolor: ${product.color} ,  \tfabric: ${product.fabric} ,    \tPRICE: ${product.price}$ `);
   }
 
   check(index) {
@@ -53,7 +53,8 @@ class Cart {
     return (
       `
       Stock:    ${this.stock.length}  
-      products: ${this.products.length}
+      products: ${this.products}
+      quantity: ${this.products.length}
       --------------
       total:    ${this.total}\n` 
     );
