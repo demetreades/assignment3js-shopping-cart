@@ -56,7 +56,7 @@ on `checkout` creates a `new Order` object witch that takes the payment strategy
 
  ![buyall](./assets/img/buyall.png)
 
-`buyAll(90)`
+`cart.buyAll(90);`
 
 
 <br>
@@ -109,7 +109,7 @@ on `checkout` creates a `new Order` object witch that takes the payment strategy
 initial DATA are located at `./src/attributes/factory/_DATA.js`
 
 
-`formatter` creates a new object and adds price as property for every attribute in DATA
+`formatter` takes to parameters `ATTRIBITE_DATA`, `ATTRIBITE_PRICE` and creates a new object that adds a named property in proper case that includes id, type, and price as properties for every attribute in `_DATA`.
 
 <br>
 
@@ -117,31 +117,32 @@ formatter(id, type, price)
 
       function formatter(id, type, price) {
         return { id: id, type: type, price: price };
-      }
+      };
 
 
 <br>
 
 factoryLoop(factory, data, price)  
 
-      function factoryLoop(factory, data, price) {
-         for(item = 0; item < Object.keys(data).length; item++) {
-         factory[Object.keys(data)[item]] = formatter(item+1, Object.values(data)[item], Object.values(price)[item]);
-        }
+      function factoryLoop(object, data, price) {
+         Object.values(data).forEach((value, index) => {
+            object[Object.keys(data)[index]] = formatter(index+1, Object.values(data)[index], Object.values(price)[index]);
+         });
+         return object;
       };
 
 <br>
 
 
- #### **sizes**
+ ### **sizes**
 
  ![sizes_object_sample](./assets/img/sizes_object_example.png) 
  
- #### **colors**
+ ### **colors**
 
  ![colors_object_sample](./assets/img/colors_object_example.png)
 
-#### **fabrics**
+### **fabrics**
  
  ![fabrics_object_sample](./assets/img/fabrics_object_example.png)
 
@@ -192,23 +193,23 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 `./src/attributes/factory/utilities.js`
 
-      setAttribute(attribute :object, name :string, price :number)
+      setAttribute(attribute :object, name :string, price :number);
 
-      getAttribute(attribute.name)
+      getAttribute(attribute.name);
 
-      getAttribute(fabrics.Silk)
+      getAttribute(fabrics.Silk);
 
-      getAttribute(sizies.L)
+      getAttribute(sizies.L);
 
-      listAttributes(...attributes) , Accepts multiple attributes
+      listAttributes(...attributes);  , Accepts multiple attributes
 
 <br>
 
 ![get](./assets/img/get2.png)
 
-`getAttribute(fabrics.Silk)`
+`getAttribute(fabrics.Silk);`
 
-`getAttribute(colors.Red)`
+`getAttribute(colors.Red);`
 
 <br>
 
@@ -226,9 +227,9 @@ Basic attribute objects are created here to be passed as arguments for creating 
 `TShirt` Produces a tshirt object that can be pass to cart for checkout.
 
       // range: 7 as the attribute's array length 
-      randomTShirtGenerator(range, colors, sizes, fabrics)    
+      randomTShirtGenerator(range, colors, sizes, fabrics); 
 
-      TShirtGenerator(array, colors, sizes, fabrics)
+      TShirtGenerator(array, colors, sizes, fabrics);
 
 
 
@@ -239,6 +240,10 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 
 <br>
+
+      cart              //  The object
+
+      --------------    //  methods   ---------------------------------------
 
       calc()            //  updates total cart's amount after each addition 
       
@@ -264,13 +269,13 @@ Basic attribute objects are created here to be passed as arguments for creating 
 
 ![checkout](./assets/img/checkout.png)
 
-`checkOut(90)`
+`cart.checkOut(90);`
 
 <br>
 
 ![cart](./assets/img/cart2.png)
 
-`itemsChecked()`
+`cart.itemsChecked();`
 
 <br>
 
