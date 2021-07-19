@@ -73,7 +73,7 @@ on `checkout` creates a `new Order` object witch that takes the payment strategy
   - [scripts](#scripts)
 - [Formatting initial DATA](#formatting-initial-data)
 - [Attributes](#attributes)
-  - [Attribute functions](#attribute-functions)
+  - [Attributes utilities functions](#attributes-utilities-functions)
 - [Cart manager](#cart-manager)
   - [Cart manager methods](#cart-manager-methods)
 
@@ -185,10 +185,10 @@ that can be accessed via dot notation.
 <br>
 
 
-### Attribute functions
+### Attributes utilities functions
 
 - You can list, rename and set new attributes at `./src/attributes/main.js`
-Basic attribute objects are created here to be passed as arguments for creating a tshirt.
+Basic attribute objects are created here to be passed as arguments for creating `new TShirt`.
 
 
 <br>
