@@ -11,6 +11,7 @@ class TShirt {
 
   toConsoleString = () => {
     this.prototype.calc();
+    
     return ` id:  ${this.id}# 
       -----------------
       size: ${this.size} 
