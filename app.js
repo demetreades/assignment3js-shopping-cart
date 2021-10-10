@@ -13,6 +13,7 @@ console.log('\tSTART ===================================\n\n');
 
 // ---------
 
+
 // ONE TSHIRT
 // -----------------------------------------------------------------
 const myTSHIRT1 = new TShirt(456, sizes.S, colors.Yellow, fabrics.Wool);
@@ -37,6 +38,7 @@ const cart = new Cart(Stock);
 
 // ---------
 
+
 // Example 1.1 :: can add one or multiple tshirt items into products array
 // -----------------------------------------------------------------------
 
@@ -45,6 +47,8 @@ const cart = new Cart(Stock);
 // cart.add(myTSHIRT3);     //  can add one tshirt object to products
 
 // ---------
+
+
 
 // Example 1.2 :: add a random generated tshirt
 // --------------------------------------------
@@ -60,6 +64,8 @@ const cart = new Cart(Stock);
 // cart.checkOut(100);      //  CHECKOUT pass the discount rate from 0 to 100
 
 // ---------
+
+
 
 // Example 2 :: buy one or multiply products from Stock
 // ----------------------------------------------------
@@ -78,6 +84,8 @@ const cart = new Cart(Stock);
 
 // ---------
 
+
+
 // Example 3 :: buy all available products from Stock
 // --------------------------------------------------
 
@@ -87,6 +95,8 @@ const cart = new Cart(Stock);
 //  with a discount rate from 0 to 100;
 
 // ---------
+
+
 
 // Example 4 :: Products in Cart empties after each checkout / order
 // -----------------------------------------------------------------
@@ -101,7 +111,7 @@ const cart = new Cart(Stock);
 // cart.checkOut(90);            //  rate: 0.9
 
 // cart.buyAll(80);              //  checks all products from Stock and checkout
-//  with a discount rate from 0 to 100;
+                                 //  with a discount rate from 0 to 100;
 
 // cart.add(myTSHIRT2);          //  can add one tshirt object to products
 
