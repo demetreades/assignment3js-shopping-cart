@@ -16,7 +16,7 @@ Jump to [Index](#index) , class repo: [Assignment3JS](https://github.com/davidos
 
 # Clone and start
 
-      git clone https://github.com/demetreades/AssignmentJS3.git
+    git clone https://github.com/demetreades/AssignmentJS3.git
 
 `cd` into proper folder.
 
@@ -77,18 +77,18 @@ To create a `cart` object you need to pass a `Stock` array or any other array of
 
 `npm run` for listing available scripts from `package.json`.
 
-      "scripts": {
+    "scripts": {
 
-      "start": "nodemon app.js",
+    "start": "nodemon app.js",
 
-      "attributes": "nodemon ./src/attributes/main.js",
-      "loops": "nodemon ./src/attributes/factory/attributes.js"
+    "attributes": "nodemon ./src/attributes/main.js",
+    "loops": "nodemon ./src/attributes/factory/attributes.js"
 
-      },
+    },
 
 <br>
 
-      npm run < script >
+    npm run "script"
 
 <br>
 
