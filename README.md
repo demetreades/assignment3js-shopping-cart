@@ -100,21 +100,21 @@ initial DATA are located at `./src/attributes/factory/_DATA.js`
 
 <br>
 
-    	const formatter = (id, type, price) => ({ id, type, price });
+    const formatter = (id, type, price) => ({ id, type, price });
 
 <br>
 
-    	const factoryLoop = (object, data, price) => {
-    		Object.values(data).forEach((value, index) => {
-    			object[Object.keys(data)[index]] = formatter(
-    				index + 1,
-    				Object.values(data)[index],
-    				Object.values(price)[index],
-    			);
-    		});
+    const factoryLoop = (object, data, price) => {
+    	Object.values(data).forEach((value, index) => {
+    		object[Object.keys(data)[index]] = formatter(
+    			index + 1,
+    			Object.values(data)[index],
+    			Object.values(price)[index],
+    		);
+    	});
 
-    		return object;
-    	};
+    	return object;
+    };
 
 <br>
 
