@@ -6,6 +6,7 @@ const getAttribute = (attribute) => {
   console.log(`      | ID       |  #${attribute.id}`);
   console.log(`      | TYPE     |  ${attribute.type}`);
   console.log(`      | PRICE    |  ${attribute.price}$\n`);
+
   return attribute.type;
 };
 
