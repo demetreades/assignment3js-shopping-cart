@@ -1,33 +1,34 @@
-'use strict';
-
 class TShirt {
   constructor(id, color, size, fabric) {
     this.id = id;
     this.size = size.type;
     this.color = color.type;
     this.fabric = fabric.type;
-    this.price = parseInt((size.price + color.price + fabric.price).toFixed(2));
+    this.price = parseInt(
+      (size.price + color.price + fabric.price).toFixed(2),
+      10,
+    );
   }
 
-  toConsoleString = () => {
-    return ` id:  ${this.id} # 
+  toConsoleString() {
+    return ` id:  ${this.id} #
       -----------------
-      size: ${this.size} 
+      size: ${this.size}
       color: ${this.color}
       fabric: ${this.fabric}
       -----------------
       Base price: ${this.price}$\n`;
-  };
+  }
 }
 
 const randomTShirtGenerator = (range, colors, sizes, fabrics) => {
   const random = Math.floor(Math.random() * range);
 
   return new TShirt(
-    parseInt((Math.random() * (random * range * 10)).toFixed(0) + 1),
+    parseInt((Math.random() * (random * range * 10)).toFixed(0) + 1, 10),
     Object.values(sizes)[random],
     Object.values(colors)[random],
-    Object.values(fabrics)[random]
+    Object.values(fabrics)[random],
   );
 };
 
