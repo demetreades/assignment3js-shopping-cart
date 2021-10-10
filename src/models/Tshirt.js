@@ -56,7 +56,4 @@ module.exports = {
   
   TShirt,
   
-  TShirtGenerator, 
-  randomTShirtGenerator
-
-};
+  TShirtGenera
