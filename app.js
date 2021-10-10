@@ -16,25 +16,26 @@ console.log('\tSTART ===================================\n\n');
 
 // ONE TSHIRT
 // -----------------------------------------------------------------
-const myTSHIRT1 = new TShirt(456, sizes.S, colors.Yellow, fabrics.Wool);
-const myTSHIRT2 = new TShirt(552, sizes.XL, colors.Red, fabrics.Silk);
-const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
+// const myTSHIRT1 = new TShirt(456, sizes.S, colors.Yellow, fabrics.Wool);
+// const myTSHIRT2 = new TShirt(552, sizes.XL, colors.Red, fabrics.Silk);
+// const myTSHIRT3 = new TShirt(652, sizes.L, colors.Blue, fabrics.Rayon);
 
 // console.log(myTSHIRT1.toConsoleString());
+// console.log(myTSHIRT1);
 // console.log(myTSHIRT2);
 // console.log(myTSHIRT3);
 // -----------------------------------------------------------------
 
 // Generates Stock object with all available variations of a tshirt.
 // -----------------------------------------------------------------
-const Stock = TShirtGenerator([], colors, sizes, fabrics);
+const stock = TShirtGenerator([], colors, sizes, fabrics);
 
-// console.log(Stock);      //  all products array
+// console.log(stock);      //  all products array
 // -----------------------------------------------------------------
 
 // Cart
 // --------------------------------------------------------------------
-const cart = new Cart(Stock);
+const cart = new Cart(stock);
 
 // ---------
 
@@ -49,7 +50,6 @@ const cart = new Cart(Stock);
 // ---------
 
 
-
 // Example 1.2 :: add a random generated tshirt
 // --------------------------------------------
 
@@ -59,12 +59,11 @@ const cart = new Cart(Stock);
 
 // console.log(cart.toConsoleString());
 
-// cart.checkOut(80);       //  CHECKOUT pass the discount rate from 0 to 100
-// cart.checkOut(90);       //  CHECKOUT pass the discount rate from 0 to 100
-// cart.checkOut(100);      //  CHECKOUT pass the discount rate from 0 to 100
+// cart.checkOut(80);            //  CHECKOUT pass the discount rate from 0 to 100
+// cart.checkOut(90);            //  CHECKOUT pass the discount rate from 0 to 100
+// cart.checkOut(100);           //  CHECKOUT pass the discount rate from 0 to 100
 
 // ---------
-
 
 
 // Example 2 :: buy one or multiply products from Stock
@@ -85,17 +84,15 @@ const cart = new Cart(Stock);
 // ---------
 
 
-
 // Example 3 :: buy all available products from Stock
 // --------------------------------------------------
 
-// cart.buyAll(80);     // credit card        //  checks all products from Stock and checkout
-// cart.buyAll(90);     // money bank         //  checks all products from Stock and checkout
-// cart.buyAll(100);    // cash , flat rate   //  checks all products from Stock and checkout
-//  with a discount rate from 0 to 100;
+// cart.buyAll(80);                       // credit card        //  checks all products from Stock and checkout
+// cart.buyAll(90);                       // money bank         //  checks all products from Stock and checkout
+// cart.buyAll(100);                      // cash , flat rate   //  checks all products from Stock and checkout
+                                                                //  with a discount rate from 0 to 100;
 
 // ---------
-
 
 
 // Example 4 :: Products in Cart empties after each checkout / order

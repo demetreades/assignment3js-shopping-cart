@@ -21,11 +21,13 @@ const {
 // 1.
 // -----------------------
 
-getAttribute(fabrics.Silk);
-getAttribute(colors.Red);
+
+// getAttribute(fabrics.Silk);
+// getAttribute(colors.Red);
 
 // 2.
 // -----------------------
+
 
 setAttribute(sizes, 'SUPER', 0.8);
 setAttribute(sizes, 'ZUPER', 0.7);
@@ -39,8 +41,9 @@ setAttribute(colors, 'black', 1);
 // 3.
 // -----------------------
 
-listAttributes(fabrics, sizes, colors);
-listAttributes(fabrics);
+
+// listAttributes(fabrics, sizes, colors);
+// listAttributes(fabrics);
 
 // console.log('\t------------------------------------- END\n');
 
