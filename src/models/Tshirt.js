@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 
 class TShirt {
   constructor(id, color, size, fabric) {
