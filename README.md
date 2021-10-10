@@ -134,13 +134,13 @@ initial DATA are located at `./src/attributes/factory/_DATA.js`
 
 Attribute's data can be accessed via its properties:
 
-      fabrics.Linen.type;   //  'LINEN'
+    fabrics.Linen.type;   //  'LINEN'
 
-      fabrics.Linen.price;  //  2.7
+    fabrics.Linen.price;  //  2.7
 
-      colors.Indigo.type;   //  'INDIGO'
+    colors.Indigo.type;   //  'INDIGO'
 
-      colors.Indigo.price;  //  0.6
+    colors.Indigo.price;  //  0.6
 
 <br>
 
@@ -154,11 +154,11 @@ Attributes are the options that needed to be passed into `TShirt` to produce a t
 
 Each attribute has a type property and a price property that can be accessed via dot notation.
 
-      fabrics.Wool.type  //  'WOOL'
+    fabrics.Wool.type  //  'WOOL'
 
-      colors.Red.price   //  0.5
+    colors.Red.price   //  0.5
 
-      sizes.XS.type      //  'XS'
+    sizes.XS.type      //  'XS'
 
 <br>
 
@@ -170,15 +170,15 @@ Each attribute has a type property and a price property that can be accessed via
 
 `./src/attributes/factory/utilities.js`
 
-      setAttribute(attribute :object, name :string, price :number);
+    setAttribute(attribute :object, name :string, price :number);
 
-      getAttribute(attribute.name);
+    getAttribute(attribute.name);
 
-      getAttribute(fabrics.Silk);
+    getAttribute(fabrics.Silk);
 
-      getAttribute(sizies.L);
+    getAttribute(sizies.L);
 
-      listAttributes(...attributes);       //   Accepts multiple attributes
+    listAttributes(...attributes);       //   Accepts multiple attributes
 
 <br>
 
@@ -192,9 +192,9 @@ Each attribute has a type property and a price property that can be accessed via
 
 ### Cart manager
 
-      ./src/models/cart.js
+    ./src/models/cart.js
 
-      ./src/models/order.js
+    ./src/models/order.js
 
 `Cart` produces the `cart` object that takes a `Stock` array and adds items into products array and `checkout` by creating a `new Order`.
 
@@ -202,11 +202,11 @@ Each attribute has a type property and a price property that can be accessed via
 
 `TShirt` Produces one or multiple tshirt objects that can be passed to `cart` for checkout.
 
-      // range: 7 as the attribute's array length
+    // range: 7 as the attribute's array length
 
-      randomTShirtGenerator(range, colors, sizes, fabrics);
+    randomTShirtGenerator(range, colors, sizes, fabrics);
 
-      TShirtGenerator(array, colors, sizes, fabrics);
+    TShirtGenerator(array, colors, sizes, fabrics);
 
 <br>
 
@@ -214,30 +214,30 @@ Each attribute has a type property and a price property that can be accessed via
 
 <br>
 
-      cart              //  The object
+    cart              //  The object
 
 
-      --------------    //  methods    --------------------------------------
+    --------------    //  methods    --------------------------------------
 
 
-      calc()            //  updates total cart's amount
+    calc()            //  updates total cart's amount
 
 
-      add(product)      //  adds product in the products array
+    add(product)      //  adds product in the products array
 
-      check(index)      //  returns the indexed item and pushes it into the products array
-
-
-      buyAll(rate)      //  adds all available products into products array
-                        //  and checkouts with a given discount as a precentage
-                        //  rate 0 to 100
+    check(index)      //  returns the indexed item and pushes it into the products array
 
 
-      itemsChecked()    //  lists all pushed products into products array
+    buyAll(rate)      //  adds all available products into products array
+    									//  and checkouts with a given discount as a precentage
+    									//  rate 0 to 100
 
-      checkOut(rate)    //  creates a new Order withdiscount rate
-                        //  completes the purchase and empties products array
-                        //  rate 0 to 100
+
+    itemsChecked()    //  lists all pushed products into products array
+
+    checkOut(rate)    //  creates a new Order withdiscount rate
+    									//  completes the purchase and empties products array
+    									//  rate 0 to 100
 
 <br>
 
