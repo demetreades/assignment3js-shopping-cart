@@ -1,3 +1,5 @@
+'use strict';
+
 const { sizes, colors, fabrics } = require('./factory/attributes');
 const {
   setAttribute,

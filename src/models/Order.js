@@ -1,3 +1,5 @@
+'use strict';
+
 class Order {
   constructor(amount, rate, labor) {
     this.rate = rate / 100;

@@ -1,3 +1,5 @@
+'use strict';
+
 const getAttribute = (attribute) => {
   console.log(`\nGET   | Property |  Value`);
   console.log(`------|----------|----------`);

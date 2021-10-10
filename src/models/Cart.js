@@ -1,3 +1,5 @@
+'use strict';
+
 const Order = require('./Order');
 
 class Cart {
@@ -32,6 +34,7 @@ class Cart {
   check(index) {
     this.products.push(this.stock.find((tshirt) => tshirt.id === index));
     console.log(`PRODUCT: ${index}# \tchecked`);
+
     return this;
   }
 
@@ -42,6 +45,7 @@ class Cart {
         this.stock.find((tshirt) => tshirt.id === index),
       ];
     });
+
     return this.checkOut(rate);
   };
 
@@ -55,6 +59,7 @@ class Cart {
     );
     this.products = [];
     console.log('\n--------- checkout\n');
+
     return new Order(this.total, rate, 40); //  last argument labor rate, from 0 to 100
   };
 
@@ -64,6 +69,7 @@ class Cart {
 
   toConsoleString = () => {
     this.calc('CONSOLE:');
+
     return `
       Stock:    ${this.stock.length}  
       products: ${this.products}

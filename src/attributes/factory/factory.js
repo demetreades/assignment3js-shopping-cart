@@ -1,3 +1,5 @@
+'use strict';
+
 const formatter = (id, type, price) => {
   return { id: id, type: type, price: price };
 };
@@ -10,6 +12,7 @@ const factoryLoop = (object, data, price) => {
       Object.values(price)[index]
     );
   });
+
   return object;
 };
 
