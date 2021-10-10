@@ -10,9 +10,7 @@ class TShirt {
   }
 
   toConsoleString = () => {
-    this.prototype.calc();
-    
-    return ` id:  ${this.id}# 
+    return ` id:  ${this.id} # 
       -----------------
       size: ${this.size} 
       color: ${this.color}
@@ -23,10 +21,10 @@ class TShirt {
 }
 
 const randomTShirtGenerator = (range, colors, sizes, fabrics) => {
-  random = Math.floor(Math.random() * range);
+  const random = Math.floor(Math.random() * range);
 
   return new TShirt(
-    +(Math.random() * (random * range * 10)).toFixed(0) + 1,
+    parseInt((Math.random() * (random * range * 10)).toFixed(0) + 1),
     Object.values(sizes)[random],
     Object.values(colors)[random],
     Object.values(fabrics)[random]

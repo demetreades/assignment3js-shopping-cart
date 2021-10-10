@@ -15,7 +15,7 @@ const setAttribute = (attribute, type, price) => {
   attribute[formatted] = {
     id: Object.keys(attribute).length + 1,
     type: formatted.toUpperCase(),
-    price: price,
+    price,
   };
 };
 

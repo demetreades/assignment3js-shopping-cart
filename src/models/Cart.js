@@ -9,7 +9,7 @@ class Cart {
     this.total = 0;
   }
 
-  calc(text) {
+  calc = (text) => {
     this.total = 0;
     console.log(`\n${text} ----------\n`);
     this.products.forEach((tshirt, index) => {
@@ -22,21 +22,21 @@ class Cart {
       );
       this.total = this.total + tshirt.price;
     });
-  }
+  };
 
-  add(product) {
+  add = (product) => {
     this.products = [...this.products, product];
     console.log(
       `ADD PRODUCT  id: ${product.id} , \tsize: ${product.size}, \tcolor: ${product.color} ,  \tfabric: ${product.fabric} ,    \tPRICE: ${product.price}$ `
     );
-  }
+  };
 
-  check(index) {
+  check = (index) => {
     this.products.push(this.stock.find((tshirt) => tshirt.id === index));
     console.log(`PRODUCT: ${index}# \tchecked`);
 
     return this;
-  }
+  };
 
   buyAll = (rate) => {
     this.stock.forEach((tshirt, index) => {
