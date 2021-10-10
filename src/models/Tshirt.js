@@ -9,41 +9,54 @@ class TShirt {
 
   toConsoleString = () => {
     this.prototype.calc();
-    return ` id:  ${this.id}# 
+    return (
+      ` id:  ${this.id}# 
       -----------------
       size: ${this.size} 
       color: ${this.color}
       fabric: ${this.fabric}
       -----------------
-      Base price: ${this.price}$\n`;
-  };
-}
+      Base price: ${this.price}$\n`
+    );
+  }
 
-const randomTShirtGenerator = (range, colors, sizes, fabrics) => {
+};
+
+
+function randomTShirtGenerator(range, colors, sizes, fabrics) {
   random = Math.floor(Math.random() * range);
   // console.log(random, ' :: RANDOM NUMBER!');
   return new TShirt(
     +(Math.random() * (random * range * 10)).toFixed(0) + 1,
     Object.values(sizes)[random],
     Object.values(colors)[random],
-    Object.values(fabrics)[random]
+    Object.values(fabrics)[random],
   );
+  
 };
 
-const TShirtGenerator = (array, colors, sizes, fabrics) => {
-  Object.values(colors).forEach((color) => {
-    Object.values(sizes).forEach((size) => {
-      Object.values(fabrics).forEach((fabric) => {
+
+function TShirtGenerator(array, colors, sizes, fabrics) {
+  Object.values(colors).forEach(color => {
+    Object.values(sizes).forEach(size => {
+      Object.values(fabrics).forEach(fabric => {
         array.push(new TShirt(array.length, color, size, fabric));
       });
     });
   });
-
+  
   return array;
+  
 };
 
-module.exports = {
+
+
+
+module.exports = { 
+  
   TShirt,
-  TShirtGenerator,
-  randomTShirtGenerator,
+  
+  TShirtGenerator, 
+  randomTShirtGenerator
+
 };

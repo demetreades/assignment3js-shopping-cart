@@ -5,10 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-
     "attributes": "nodemon ./src/attributes/main.js",
     "loops": "nodemon ./src/attributes/factory/attributes.js"
-    
   },
   "author": "quorum",
   "license": "ISC",
@@ -20,7 +18,9 @@
     "url": "git+https://github.com/demetreades/Assignment3JS.git"
   },
   "keywords": [
-    "design-patterns",
+    "node",
+    "design patterns",
+    "strategy pattern",
     "assignment"
   ],
   "bugs": {
