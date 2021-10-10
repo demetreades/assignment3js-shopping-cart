@@ -1,5 +1,3 @@
-'use strict';
-
 const Cart = require('./src/models/Cart');
 const { sizes, colors, fabrics } = require('./src/attributes');
 const {
@@ -54,9 +52,9 @@ cart.add(myTSHIRT3); //  can add one tshirt object to products
 // Example 1.2 :: add a random generated tshirt
 // --------------------------------------------
 
-// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics)); //  ( array, range, colors, sizes, fabrics )
-// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics)); //  ( array, range, colors, sizes, fabrics )
-// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics)); //  ( array, range, colors, sizes, fabrics )
+// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics));
+// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics));
+// cart.add(randomTShirtGenerator(7, colors, sizes, fabrics));
 
 // console.log(cart.toConsoleString());
 
@@ -71,9 +69,9 @@ cart.add(myTSHIRT3); //  can add one tshirt object to products
 
 // cart.check(26); //  takes Stock and adds a product by id to products from Stock list
 
-// cart.check(81).check(9);      //  takes Stock and adds a product by id to products from Stock list
-// cart.check(1).check(3); //  takes Stock and adds a product by id to products from Stock list
-// cart.check(229);              //  takes Stock and adds a product by id to products from Stock list
+// cart.check(81).check(9);  //  takes Stock and adds a product by id to products from Stock list
+// cart.check(1).check(3);   //  takes Stock and adds a product by id to products from Stock list
+// cart.check(229);          //  takes Stock and adds a product by id to products from Stock list
 
 // cart.itemsChecked();          //  list of available items in products array
 
@@ -86,9 +84,9 @@ cart.checkOut(90); //  CHECKOUT pass the discount rate from 0 to 100
 // Example 3 :: buy all available products from Stock
 // --------------------------------------------------
 
-// cart.buyAll(80);                       // credit card        //  checks all products from Stock and checkout
-// cart.buyAll(90);                       // money bank         //  checks all products from Stock and checkout
-// cart.buyAll(100);                      // cash , flat rate   //  checks all products from Stock and checkout
+// cart.buyAll(80);           // credit card        //  checks all products from Stock and checkout
+// cart.buyAll(90);           // money bank         //  checks all products from Stock and checkout
+// cart.buyAll(100);          // cash , flat rate   //  checks all products from Stock and checkout
 //  with a discount rate from 0 to 100;
 
 // ---------
@@ -96,24 +94,24 @@ cart.checkOut(90); //  CHECKOUT pass the discount rate from 0 to 100
 // Example 4 :: Products in Cart empties after each checkout / order
 // -----------------------------------------------------------------
 
-// cart.add(myTSHIRT1);          //  can add one tshirt object to products
-// cart.add(myTSHIRT2);          //  can add one tshirt object to products
-// cart.add(myTSHIRT3);          //  can add one tshirt object to products
+// cart.add(myTSHIRT1);         //  can add one tshirt object to products
+// cart.add(myTSHIRT2);         //  can add one tshirt object to products
+// cart.add(myTSHIRT3);         //  can add one tshirt object to products
 
-// cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list
-// cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list
+// cart.check(80).check(9);     //  takes Stock and adds a product by id to products from Stock list
+// cart.check(1).check(3);      //  takes Stock and adds a product by id to products from Stock list
 // cart.check(229);
-// cart.checkOut(90);            //  rate: 0.9
+// cart.checkOut(90);           //  rate: 0.9
 
-// cart.buyAll(80);              //  checks all products from Stock and checkout
+// cart.buyAll(80);             //  checks all products from Stock and checkout
 //  with a discount rate from 0 to 100;
 
-// cart.add(myTSHIRT2);          //  can add one tshirt object to products
+// cart.add(myTSHIRT2);         //  can add one tshirt object to products
 
-// cart.check(80).check(9);      //  takes Stock and adds a product by id to products from Stock list
-// cart.check(1).check(3);       //  takes Stock and adds a product by id to products from Stock list
+// cart.check(80).check(9);     //  takes Stock and adds a product by id to products from Stock list
+// cart.check(1).check(3);      //  takes Stock and adds a product by id to products from Stock list
 
-// cart.checkOut(100);           //  rate: 1 no profit
+// cart.checkOut(100);          //  rate: 1 no profit
 
 // ---------
 

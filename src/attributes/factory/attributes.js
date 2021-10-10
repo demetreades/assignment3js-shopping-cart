@@ -1,5 +1,3 @@
-'use strict';
-
 const { factoryLoop } = require('./factory');
 const {
   COLOR_DATA,

@@ -1,5 +1,3 @@
-'use strict';
-
 const Order = require('./Order');
 
 class Cart {
@@ -9,8 +7,7 @@ class Cart {
     this.total = 0;
   }
 
-  calc = (text) => {
-    this.total = 0;
+  calc(text) {
     console.log(`\n${text} ----------\n`);
     this.products.forEach((tshirt, index) => {
       console.log(
@@ -18,65 +15,65 @@ class Cart {
           tshirt.price
         }$ \t| size: ${tshirt.size} \t| color: ${
           tshirt.color
-        }      \t| fabric: ${tshirt.fabric}  \t ::   ADDED TO YOUR CART`
+        }      \t| fabric: ${tshirt.fabric}  \t ::   ADDED TO YOUR CART`,
       );
-      this.total = this.total + tshirt.price;
+      this.total += tshirt.price;
     });
-  };
+  }
 
-  add = (product) => {
+  add(product) {
     this.products = [...this.products, product];
     console.log(
-      `ADD PRODUCT  id: ${product.id} , \tsize: ${product.size}, \tcolor: ${product.color} ,  \tfabric: ${product.fabric} ,    \tPRICE: ${product.price}$ `
+      `ADD PRODUCT  id: ${product.id} , \tsize: ${product.size}, \tcolor: ${product.color} ,  \tfabric: ${product.fabric} ,    \tPRICE: ${product.price}$ `,
     );
-  };
+  }
 
-  check = (index) => {
+  check(index) {
     this.products.push(this.stock.find((tshirt) => tshirt.id === index));
     console.log(`PRODUCT: ${index}# \tchecked`);
 
     return this;
-  };
+  }
 
-  buyAll = (rate) => {
+  buyAll(rate) {
     this.stock.forEach((tshirt, index) => {
       this.products = [
         ...this.products,
-        this.stock.find((tshirt) => tshirt.id === index),
+        this.stock.find((item) => item.id === index),
       ];
     });
 
     return this.checkOut(rate);
-  };
+  }
 
-  checkOut = (rate) => {
+  checkOut(rate) {
     this.calc('CHECKOUT:');
     console.log('\n------------------');
     console.log(
       `\nCHECK OUT \t with base total price: ${this.total.toFixed(
-        2
-      )}$ , Quantity: ${this.products.length}#`
+        2,
+      )}$ , Quantity: ${this.products.length}#`,
     );
     this.products = [];
     console.log('\n--------- checkout\n');
 
     return new Order(this.total, rate, 40); //  last argument labor rate, from 0 to 100
-  };
+  }
 
-  itemsChecked = () => {
+  itemsChecked() {
     console.log(this.products, ':::: in cart:', this.products.length);
-  };
+  }
 
-  toConsoleString = () => {
+  toConsoleString() {
     this.calc('CONSOLE:');
 
     return `
-      Stock:    ${this.stock.length}  
+      Stock:    ${this.stock.length}
       products: ${this.products}
       quantity: ${this.products.length}
       --------------
       total:    ${this.total}\n`;
-  };
+  }
 }
 
 module.exports = Cart;

@@ -26,7 +26,15 @@ module.exports = {
     XXL: 'XXL',
     XXXL: 'XXXL',
   },
-  SIZE_PRICE: { XS: 0.1, S: 0.1, M: 0.2, L: 0.2, XL: 0.3, XXL: 0.4, XXXL: 0.4 },
+  SIZE_PRICE: {
+    XS: 0.1,
+    S: 0.1,
+    M: 0.2,
+    L: 0.2,
+    XL: 0.3,
+    XXL: 0.4,
+    XXXL: 0.4,
+  },
   FABRIC_DATA: {
     Wool: 'WOOL',
     Cotton: 'COTTON',
