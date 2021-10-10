@@ -12,7 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.0.0",
-    "nodemon": "^2.0.12"
+    "eslint-prettier-config": "^1.0.1",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1"
   },
   "repository": {
     "type": "git",
