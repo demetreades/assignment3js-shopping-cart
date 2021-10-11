@@ -1,10 +1,10 @@
-const Cart = require('./src/models/Cart');
-const { sizes, colors, fabrics } = require('./src/attributes');
+const Cart = require('./models/Cart');
+const { sizes, colors, fabrics } = require('./attributes');
 const {
   TShirt,
   TShirtGenerator,
   randomTShirtGenerator,
-} = require('./src/models/Tshirt');
+} = require('./models/Tshirt');
 
 // ////////////////////////////////////////////////////////////////////// //
 //                              MAIN APP                                  //
