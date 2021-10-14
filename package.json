@@ -1,7 +1,7 @@
 {
-  "name": "design-patterns",
-  "version": "0.2.0",
-  "description": "AssignmentJS3 , Design Patterns",
+  "name": "assignment3js-shopping-cart-shopping-cart",
+  "version": "0.3.0",
+  "description": "Design patterns, shopping cart implementation",
   "main": "./src/app.js",
   "scripts": {
     "start": "nodemon ./src/app.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/demetreades/Assignment3JS.git"
+    "url": "git+https://github.com/demetreades/assignment3js-shopping-cart.git"
   },
   "keywords": [
     "node",
@@ -32,7 +32,7 @@
     "assignment"
   ],
   "bugs": {
-    "url": "https://github.com/demetreades/Assignment3JS/issues"
+    "url": "https://github.com/demetreades/assignment3js-shopping-cart/issues"
   },
-  "homepage": "https://github.com/demetreades/Assignment3JS#readme"
+  "homepage": "https://github.com/demetreades/assignment3js-shopping-cart#readme"
 }
