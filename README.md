@@ -16,7 +16,7 @@ Jump to [Index](#index) , class repo: [Assignment3JS](https://github.com/davidos
 
 # Clone and start
 
-    git clone https://github.com/demetreades/AssignmentJS3.git
+    git clone https://github.com/demetreades/demetreades/assignment3js-shopping-cart.git
 
 `cd` into proper folder.
 
